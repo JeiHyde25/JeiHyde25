@@ -1,76 +1,62 @@
-# Data Analysis and Prediction Project
+# jeihyde-proj
 
-## Overview
-This project demonstrates advanced data analysis and machine learning capabilities using Python. It includes data processing, model training, and prediction generation with real-world datasets.
+Hi, I'm Harold — a software engineer with 10+ years of experience in C++, Python, and backend systems. I'm currently transitioning into freelance work with a focus on building practical, real-world applications using machine learning, data analysis, and fullstack web development (React, Next.js, Python).
 
-## Features
-- Data preprocessing and analysis
-- Machine learning model implementation
-- Prediction generation and evaluation
-- Comprehensive data visualization
-- Model performance metrics tracking
+This repository serves as my personal project hub, where I document and share what I’m building as I level up in AI and web technologies.
 
-## Technology Stack
-- Python 3.x
-- Jupyter Notebook
-- pandas
-- scikit-learn
-- matplotlib/seaborn
+---
 
-## Project Structure
-```
-.
-├── notebook.ipynb          # Main Jupyter notebook with analysis
-├── notebook.py            # Python script version of the notebook
-├── data/
-│   ├── index_1.csv       # Primary dataset
-│   └── index_2.csv       # Secondary dataset
-├── model_metrics.txt         # Model performance metrics
-└── future_predictions.csv # Generated predictions
-```
+## 🚀 Featured Projects
 
-## Installation
-1. Clone the repository:
-```bash
-git clone https://github.com/JeiHyde25/jeihyde-proj.git
-cd jeihyde-proj
-```
+### Coffee Sales Forecasting App
+Forecasts daily coffee shop revenue using simple linear regression.
 
-2. Create a virtual environment and activate it:
-```bash
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
+- Tech: Python, pandas, scikit-learn, matplotlib
+- Skills: Data cleaning, feature engineering, ML modeling, visualization
+- Status: ✅ Completed
+- Demo & Code: [coming soon]
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+---
 
-## Usage
-1. Activate the virtual environment:
-```bash
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
+### Resume Ranker *(in progress)*
+An NLP-based app that scores resumes against job descriptions using TF-IDF and cosine similarity.
 
-2. Run the Jupyter notebook:
-```bash
-jupyter notebook notebook.ipynb
-```
+- Tech: Python, scikit-learn, Streamlit
+- Skills: Text processing, vectorization, similarity scoring
+- Status: 🚧 In progress
 
-Or run the Python script directly:
-```bash
-python notebook.py
-```
+---
 
-## Model Performance
-The project includes detailed model performance metrics, which can be found in the `model_metrics` file.
+### AI Chatbot Assistant *(coming soon)*
+A GPT-based assistant for small business Q&A automation.
 
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+- Tech: Python, OpenAI API, Flask
+- Skills: Prompt design, API integration
+- Status: 📝 Planned
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
 
-## Contact
-- GitHub: [@JeiHyde25](https://github.com/JeiHyde25) 
+## 🧰 Tech Stack
+
+- **Languages:** Python, JavaScript, C++
+- **Frontend:** React.js, Next.js, HTML/CSS
+- **Backend:** Flask, .NET
+- **AI/ML:** scikit-learn, pandas, NumPy, OpenAI API
+- **Tools:** Streamlit, Git, Docker, VS Code
+
+---
+
+## 📌 Why This Repo Exists
+
+- To document my learning journey as I shift into AI + fullstack freelancing
+- To showcase working projects to potential clients and collaborators
+- To iterate and grow through real-world experiments
+
+---
+
+## 📫 Let's Connect
+
+- Email: haroldjamestago@yahoo.com  
+- LinkedIn: [linkedin.com/in/haroldjamestago](https://www.linkedin.com/in/haroldjamestago)
+
+> _“Build fast. Learn with purpose. Solve real problems.”_
