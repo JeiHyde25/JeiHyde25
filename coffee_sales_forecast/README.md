@@ -20,9 +20,9 @@ This project implements a sales forecasting system for coffee shops using linear
 ## Project Structure
 ```
 .
-├── notebook.ipynb          # Main Jupyter notebook with analysis
+├── notebook.ipynb         # Main Jupyter notebook with analysis
 ├── notebook.py            # Python script version of the notebook
-├── model_metrics         # Model performance metrics
+├── model_metrics.txt      # Model performance metrics
 └── future_predictions.csv # Generated predictions
 ```
 
