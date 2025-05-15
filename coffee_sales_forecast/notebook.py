@@ -1,35 +1,37 @@
 import matplotlib.pyplot as plt
-# Import necessary libraries
 import pandas as pd
-import numpy as np
 from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder
 from sklearn.model_selection import train_test_split
 import kagglehub
-from sklearn.compose import ColumnTransformer
-import os
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import streamlit as st
+import os
+import tempfile
 
 st.title("Coffee Sales Forecast")
 st.write("This app predicts coffee sales based on historical data.")
 
 @st.cache_data
 def load_data():
-  # Download the latest version
-  path = kagglehub.dataset_download("ihelon/coffee-sales")
-  path1 = path + "/index_1.csv"
-  path2 = path + "/index_2.csv"
+  try:
+    # Set cache directory to a temporary location
+    temp_dir = tempfile.mkdtemp()
+    os.environ["KAGGLEHUB_CACHE_DIR"] = temp_dir
 
-  # Load the dataset
-  df1 = pd.read_csv(path1)
-  df2 = pd.read_csv(path2)
-  df = pd.concat([df1, df2], ignore_index=True)
+    # Download the latest version
+    path = kagglehub.dataset_download("ihelon/coffee-sales")
+    path1 = path + "/index_1.csv"
+    path2 = path + "/index_2.csv"
 
-  return df
-
-df = load_data()
-
+    # Load the dataset
+    df1 = pd.read_csv(path1)
+    df2 = pd.read_csv(path2)
+    df = pd.concat([df1, df2], ignore_index=True)
+    return df
+  except Exception as e:
+    st.error(f"Error loading data: {str(e)}")
+    st.info("Please check your internet connection and try again.")
+    st.stop()
 
 def preprocess_data(df):
     # Convert datetime
@@ -45,20 +47,22 @@ def preprocess_data(df):
     
     return daily_sales
 
-daily_sales = preprocess_data(df)
+with st.spinner("Loading data..."):
+  df = load_data()
+  daily_sales = preprocess_data(df)
+
+def train_model(daily_sales):
+  X = daily_sales[['days_since_start']]
+  y = daily_sales['money']
+
+  model = LinearRegression()
+  model.fit(X, y)
+  return model
 
 # Split the dataset into an 80-20 training-test set
 X = daily_sales[['days_since_start']]
 y = daily_sales['money']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-def train_model(daily_sales):
-    X = daily_sales[['days_since_start']]
-    y = daily_sales['money']
-    
-    model = LinearRegression()
-    model.fit(X, y)
-    return model
 
 # Train the model
 model = train_model(daily_sales)
@@ -72,7 +76,8 @@ mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 
 # Save to txt file
-with open('model_metrics.txt', 'w') as f:
+output_path = os.path.join("/tmp", "model_metrics.txt")
+with open(output_path, 'w') as f:
     f.write(f"Mean Absolute Error: {mae}\n")
     f.write(f"Mean Squared Error: {mse}\n")
     f.write(f"R2 Score: {r2}")
