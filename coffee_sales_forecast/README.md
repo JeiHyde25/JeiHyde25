@@ -1,61 +1,116 @@
 # Coffee Sales Forecasting App
 
 ## Overview
-This project implements a sales forecasting system for coffee shops using linear regression. It processes historical sales data to predict daily revenue, helping coffee shop owners make informed business decisions.
+This project implements a sales forecasting system for coffee shops using linear regression and provides an interactive web interface using Streamlit. It processes historical sales data to predict daily revenue, helping coffee shop owners make informed business decisions.
 
 ## Features
-- Historical sales data analysis
-- Daily revenue prediction
-- Seasonal trend analysis
-- Interactive visualizations
-- Performance metrics tracking
+- Interactive web interface with Streamlit
+- Real-time sales predictions for specific dates
+- Future sales forecasting (up to 30 days)
+- Historical sales data visualization
+- Detailed performance metrics dashboard
+- Interactive data tables and charts
 
 ## Technology Stack
 - Python 3.x
-- Jupyter Notebook
+- Streamlit
 - pandas
 - scikit-learn
-- matplotlib/seaborn
+- matplotlib
+- kagglehub
+- Docker
 
 ## Project Structure
 ```
 .
-├── notebook.ipynb         # Main Jupyter notebook with analysis
-├── notebook.py            # Python script version of the notebook
-├── model_metrics.txt      # Model performance metrics
+├── notebook.py           # Main application file with Streamlit interface
+├── data/                # Data directory for CSV files
+│   ├── index_1.csv     # First part of the dataset
+│   └── index_2.csv     # Second part of the dataset
+├── model_metrics.txt    # Model performance metrics
+├── requirements.txt     # Project dependencies
+├── Dockerfile          # Docker configuration file
 └── future_predictions.csv # Generated predictions
 ```
 
-## Installation
-1. Create a virtual environment and activate it:
+## Installation and Usage
+
+### Option 1: Local Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/JeiHyde25/jeihyde-proj.git
+cd coffee_sales_forecast
+```
+
+2. Create a virtual environment and activate it:
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
-2. Install dependencies:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
-1. Activate the virtual environment:
+4. Set up Kaggle credentials (if using Kaggle dataset):
 ```bash
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+mkdir -p ~/.kaggle
+# Move your kaggle.json file to ~/.kaggle/
+chmod 600 ~/.kaggle/kaggle.json
 ```
 
-2. Run the Jupyter notebook:
+5. Run the Streamlit app:
 ```bash
-jupyter notebook notebook.ipynb
+streamlit run notebook.py
 ```
 
-Or run the Python script directly:
+### Option 2: Using Docker
+
+1. Clone the repository (if you haven't already):
 ```bash
-python notebook.py
+git clone https://github.com/JeiHyde25/jeihyde-proj.git
+cd coffee_sales_forecast
 ```
+
+2. Set up Kaggle credentials:
+- Copy your `kaggle.json` file to the project directory
+- The file will be mounted into the container
+
+3. Build and run the Docker container:
+```bash
+# Build the Docker image
+docker build -t coffee-sales-forecast .
+
+# Run the container
+docker run -p 8501:8501 -v $(pwd)/kaggle.json:/root/.kaggle/kaggle.json coffee-sales-forecast
+```
+
+4. Access the application:
+Open your web browser and navigate to `http://localhost:8501`
+
+The application will open in your default web browser with the following features:
+- View historical sales data and trends
+- Make predictions for specific dates
+- Generate future sales forecasts
+- View model performance metrics
+- Export predictions to CSV
 
 ## Model Performance
-The project includes detailed model performance metrics, which can be found in the `model_metrics.txt` file. The current model achieves:
-- Mean Absolute Error (MAE): 130.51
-- R-squared Score: 0.26
-- Root Mean Square Error (RMSE): 26320.37
+The model's performance metrics are displayed in the web interface and include:
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- R-squared Score
+
+## Troubleshooting
+
+### Docker Issues
+- If you get permission errors with Kaggle credentials, make sure your `kaggle.json` file has the correct permissions
+- If the container fails to start, check if port 8501 is already in use
+- For Windows users, use `%cd%` instead of `$(pwd)` in the docker run command
+
+### Kaggle Authentication
+- Ensure your `kaggle.json` file contains valid credentials
+- The file should be properly mounted in the Docker container
+- Check the Kaggle API status if downloads fail

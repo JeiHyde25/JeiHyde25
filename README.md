@@ -2,19 +2,23 @@
 
 Hi, I'm Harold — a software engineer with 10+ years of experience in C++, Python, and backend systems. I'm currently transitioning into freelance work with a focus on building practical, real-world applications using machine learning, data analysis, and fullstack web development (React, Next.js, Python).
 
-This repository serves as my personal project hub, where I document and share what I’m building as I level up in AI and web technologies.
+This repository serves as my personal project hub, where I document and share what I'm building as I level up in AI and web technologies.
 
 ---
 
 ## 🚀 Featured Projects
 
 ### Coffee Sales Forecasting App
-Forecasts daily coffee shop revenue using simple linear regression.
+An interactive web application that forecasts daily coffee shop revenue using machine learning.
 
-- Tech: Python, pandas, scikit-learn, matplotlib
-- Skills: Data cleaning, feature engineering, ML modeling, visualization
+- Tech: Python, Streamlit, pandas, scikit-learn, matplotlib, Kaggle API
+- Features: 
+  - Interactive web interface
+  - Real-time sales predictions
+  - Future sales forecasting (up to 30 days)
+  - Performance metrics dashboard
 - Status: ✅ Completed
-- Demo & Code: [coming soon]
+- Demo: [View Project](https://github.com/JeiHyde25/jeihyde-proj/tree/main/coffee_sales_forecast)
 
 ---
 
@@ -42,7 +46,9 @@ A GPT-based assistant for small business Q&A automation.
 - **Frontend:** React.js, Next.js, HTML/CSS
 - **Backend:** Flask, .NET
 - **AI/ML:** scikit-learn, pandas, NumPy, OpenAI API
-- **Tools:** Streamlit, Git, Docker, VS Code
+- **Data Visualization:** Matplotlib, Streamlit
+- **Tools:** Git, Docker, VS Code
+- **APIs:** Kaggle, OpenAI
 
 ---
 
@@ -59,4 +65,4 @@ A GPT-based assistant for small business Q&A automation.
 - Email: haroldjamestago@yahoo.com  
 - LinkedIn: [linkedin.com/in/haroldjamestago](https://www.linkedin.com/in/haroldjamestago)
 
-> _“Build fast. Learn with purpose. Solve real problems.”_
+> _"Build fast. Learn with purpose. Solve real problems."_
