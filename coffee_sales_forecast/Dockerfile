@@ -56,7 +56,7 @@ ENV HOME=/tmp
 USER appuser
 
 # Expose the port that the application listens on.
-EXPOSE 8501
+EXPOSE 8080
 
 # Run the application.
-CMD streamlit run notebook.py --server.port=8501 --server.address=0.0.0.0
+CMD streamlit run notebook.py --server.port=8080 --server.address=0.0.0.0

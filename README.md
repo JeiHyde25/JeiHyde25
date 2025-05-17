@@ -4,6 +4,24 @@ Hi, I'm Harold — a software engineer with 10+ years of experience in C++, Pyth
 
 This repository serves as my personal project hub, where I document and share what I'm building as I level up in AI and web technologies.
 
+## 📁 Repository Structure
+```
+jeihyde-proj/
+├── coffee_sales_forecast/         # Coffee Sales Prediction Project
+│   ├── data/                      # Dataset directory
+│   │   ├── index_1.csv            # First part of sales data
+│   │   └── index_2.csv            # Second part of sales data
+│   ├── notebook.py                # Main Streamlit application
+│   ├── requirements.txt           # Python dependencies
+│   ├── Dockerfile                 # Docker configuration
+│   ├── model_metrics.txt          # Model evaluation results
+│   ├── future_predictions.csv     # Generated forecasts
+│   └── README.md                  # Project documentation
+├── .gitignore                     # Git ignore rules
+├── LICENSE                        # Repository license
+└── README.md                      # Main repository documentation
+```
+
 ---
 
 ## 🚀 Featured Projects
