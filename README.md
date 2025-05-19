@@ -36,7 +36,8 @@ An interactive web application that forecasts daily coffee shop revenue using ma
   - Future sales forecasting (up to 30 days)
   - Performance metrics dashboard
 - Status: ✅ Completed
-- Demo: [View Project](https://github.com/JeiHyde25/jeihyde-proj/tree/main/coffee_sales_forecast)
+- Demo: [Live Application](https://coffee-forecast-app.onrender.com)
+- Source: [View Project](https://github.com/JeiHyde25/jeihyde-proj/tree/main/coffee_sales_forecast)
 
 ---
 
@@ -67,6 +68,24 @@ A GPT-based assistant for small business Q&A automation.
 - **Data Visualization:** Matplotlib, Streamlit
 - **Tools:** Git, Docker, VS Code
 - **APIs:** Kaggle, OpenAI
+
+---
+
+## 🤝 Contributing
+
+I welcome contributions to any of the projects in this repository! Here's how you can help:
+
+1. Fork the repository
+2. Create a new branch for your feature (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please make sure to:
+- Follow the existing code style
+- Add tests for new features
+- Update documentation as needed
+- Keep commits atomic and well-described
 
 ---
 

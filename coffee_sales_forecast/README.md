@@ -3,6 +3,8 @@
 ## Overview
 This project implements a sales forecasting system for coffee shops using linear regression and provides an interactive web interface using Streamlit. It processes historical sales data to predict daily revenue, helping coffee shop owners make informed business decisions.
 
+**Live Demo:** [Coffee Sales Forecast App](https://coffee-forecast-app.onrender.com)
+
 ## Features
 - Interactive web interface with Streamlit
 - Real-time sales predictions for specific dates
@@ -102,6 +104,20 @@ The model's performance metrics are displayed in the web interface and include:
 - Mean Absolute Error (MAE)
 - Mean Squared Error (MSE)
 - R-squared Score
+
+## Deployment
+The application is deployed on Render.com and can be accessed at [https://coffee-forecast-app.onrender.com](https://coffee-forecast-app.onrender.com).
+
+### Deployment Notes
+- The app is deployed using Render's Web Service
+- Free tier deployment may have cold starts (initial load might take a few seconds)
+- The deployment automatically pulls from the main branch of the repository
+- Environment variables are configured through Render's dashboard
+
+### Local vs Deployed Version
+- The deployed version has the same functionality as the local version
+- All features including predictions, visualizations, and data exports are available
+- The deployed version uses the same model and data processing pipeline
 
 ## Troubleshooting
 
