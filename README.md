@@ -14,7 +14,7 @@ This repository serves as my personal project hub, where I document and share wh
 | Project | Description | Tech Stack | Link |
 |---------|-------------|------------|------|
 | ☕ Coffee Sales Forecast | ML app for predicting sales based on historic data | Python, Streamlit, scikit-learn | [View](https://github.com/JeiHyde25/coffee-sales-forecast-app) |
-| 🏐 VolleyTeamGen (WIP) | AI agent that generates fair volleyball teams | OpenAI, Python, Streamlit | [Coming Soon]() |
+| 🏐 VolleyTeamGen (WIP) | AI agent that generates fair volleyball teams | OpenAI, Python, Streamlit | [View](https://github.com/JeiHyde25/volleyball-team-generator) |
 
 ## 🧰 Tech Stack
 
