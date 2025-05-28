@@ -22,4 +22,4 @@ jobs:
           git remote add mirror https://x-access-token:${{ secrets.TOKEN }}@github.com/JeiHyde25/JeiHyde25.git
           git remote -v
           git config --get remote.mirror.url
-          git push --mirror mirror
+          git push --mirror mirror 
