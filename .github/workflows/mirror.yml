@@ -22,7 +22,7 @@ jobs:
           git remote add mirror https://x-access-token:${TOKEN}@github.com/JeiHyde25/JeiHyde25.git
           git remote -v
           git config --get remote.mirror.url
-          echo "Token begins with: ${TOKEN:0:4}"
+          echo "Token begins with: ${TOKEN}"
           git push --mirror mirror
         env:
           TOKEN: ${{ secrets.TOKEN }}
