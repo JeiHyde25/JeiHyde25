@@ -3,7 +3,7 @@ name: Mirror to JeiHyde25
 on:
   push:
     branches:
-      - main  # change this if you're using another default branch
+      - main  # Update if your branch name differs
 
 jobs:
   mirror:
@@ -12,10 +12,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure full history is available
 
       - name: Mirror push to JeiHyde25 repo
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git remote add mirror https://$GITHUB_ACTOR:${{ secrets.TOKEN }}@github.com/JeiHyde25/JeiHyde25.git
+          git remote add mirror https://JeiHyde25:${{ secrets.TOKEN }}@github.com/JeiHyde25/JeiHyde25.git
           git push --mirror mirror
