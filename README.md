@@ -11,8 +11,7 @@ I build production-grade backend systems and AI-powered tools. 10+ years across 
 | Project | Description | Stack |
 |---|---|---|
 | [**Coffee Sales Forecast**](https://github.com/JeiHyde25/coffee-sales-forecast-app) | ML app forecasting daily coffee shop sales from historical POS data — live, with CI/CD pipeline | Python · scikit-learn · Streamlit · Docker · GitHub Actions · Render |
-| [**Incident Commander**](https://github.com/JeiHyde25/incident-commander) | CLI tool for automating ServiceNow incident creation — designed for ITSM and DevOps workflows | Python · ServiceNow REST API · argparse · dotenv |
-| [**Znuny Dashboard Enhancer**](https://github.com/JeiHyde25/znuny-dashboard-enhancer) | Custom ITSM plugin adding filterable panels, real-time ticket metrics, and SLA tracking | Perl · Znuny/OTRS |
+| [**Volleyball Team Generator**](https://github.com/JeiHyde25/volleyball-team-generator) | Streamlit app that generates fair, balanced volleyball teams based on player positions and skill levels using OpenAI | Python · OpenAI API · Streamlit |
 
 ---
 
@@ -20,7 +19,7 @@ I build production-grade backend systems and AI-powered tools. 10+ years across 
 
 | Project | Description | Stack | Phase |
 |---|---|---|---|
-| [**Kairvo Agent**](https://github.com/JeiHyde25/kairvo-agent) | AI job application agent — discovers opportunities, analyzes fit, and generates tailored application materials with human-in-the-loop control | Python · OpenAI · FastAPI · Streamlit | MVP |
+| **Kairvo Agent** *(private — in active development)* | AI job application agent — discovers opportunities, analyzes fit, and generates tailored application materials with human-in-the-loop control | Python · OpenAI · FastAPI · Streamlit | MVP |
 | [**PlannerFlow API**](https://github.com/JeiHyde25/plannerflow-api) | AI-powered backend converting handwritten planner scans into structured schedules and calendar events | FastAPI · OpenAI Vision · PostgreSQL · Supabase · Docker | MVP |
 | [**PlannerFlow Web**](https://github.com/JeiHyde25/plannerflow-web) | Frontend for reviewing AI-extracted schedules and exporting to digital calendars | TypeScript · Next.js · React | MVP |
 
